@@ -1,0 +1,378 @@
+// ====== SCSS ======
+$margin-rs: 0;
+$padding-rs: 0;
+
+$color-df: #fff;
+$color: #231b2e;
+$bg-color-df: #fff;
+$bg-color-1: #231b2e;
+$bg-color-2: #170f23;
+$bg-color-3: #170f23b1;
+$bg-rgba: rgba(255, 255, 255, 0.05);
+
+$font-family: Lato, sans-serif;
+$font-s-1: 0.8em;
+$font-s-2: 0.85em;
+$font-s-3: 0.9em;
+$font-s-4: 1.2em;
+$font-s-5: 1.7em;
+$font-w-df: bold;
+$font-w-300: 300;
+$font-w-400: 400;
+
+$width-f: 100%;
+$width: 80%;
+$width-1: 240px;
+$width-2: 250px;
+$width-3: 100px;
+$width-4: 60px;
+$width-5: 25%;
+$width-6: 150px;
+
+$height-f: 100%;
+$height-1: 50px;
+$height-2: 250px;
+$height-3: 100px;
+$height-4: 60px;
+$height-5: 150px;
+
+$border: 1px solid #170f23;
+$border-none: none;
+$border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+
+$margin-l: auto;
+$margin-tb-lr: 0 10px;
+$padding: 20px;
+$padding-1: 10px;
+$padding-2: 3px;
+$padding-t: 10px;
+$padding-t-1: 20px;
+$padding-r: 20px;
+$padding-r-1: 10px;
+$padding-bt-1: 50px;
+$padding-bt-2: 5px;
+$padding-bt-3: 15px;
+$padding-bt-4: 10px;
+$padding-bt-5: 0px;
+$padding-bt-6: 7px;
+$padding-l: 30px;
+$padding-l-1: 0px;
+$padding-l-2: 15px;
+$padding-tb-lr: 0 20px;
+$padding-tb-lr-1: 15px 0px;
+
+$line-height: 25px;
+$line-height-1: 15px;
+$align-items: center;
+$align-items-f-s: flex-start;
+$text-align: center;
+$text-align-r: right;
+
+// ====== Extend ======
+.display-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.display-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.background-img {
+  background-image: url("../img/logo-dark.svg");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position-y: 30%;
+}
+
+.background-img-m {
+  background-image: url(../img/icon_zingmp3.svg);
+  background-position-x: 50%;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-flex {
+  display: flex;
+}
+
+// ========================= Compiling ==============================
+* {
+  margin: $margin-rs;
+  padding: $padding-rs;
+}
+
+html,
+body {
+  @extend .display-col;
+  background-color: $bg-color-df;
+  font-family: $font-family;
+  font-size: $font-s-3;
+  color: $color;
+  height: $height-f;
+}
+
+#main {
+  flex: 1 0 auto;
+  @extend .display-flex;
+}
+
+.side-bar {
+  flex: 0 0 240px;
+  @extend .display-col;
+  padding-left: $padding-l-2;
+  justify-content: space-around;
+  align-items: $align-items-f-s;
+  background-color: $bg-color-1;
+}
+
+.side-bar i.fa {
+  font-size: $font-s-4;
+}
+
+.cate-side-bar {
+  cursor: pointer;
+}
+
+.cate-side-bar .fa {
+  color: $color-df;
+}
+
+.cate-side-bar .sb-item {
+  color: $color-df;
+  font-weight: $font-w-df;
+}
+
+.sb-logo {
+  width: $width-1;
+  height: $height-1;
+  @extend .background-img;
+}
+
+.bd-bottom {
+  border-bottom: $border-bottom;
+  width: $width-f;
+  padding-bottom: $padding-bt-1;
+}
+/* end side bar */
+
+/* start play-list-music */
+.play-list-music {
+  flex: 1 1 auto;
+  @extend .display-col;
+}
+
+.top-music-control {
+  flex: 0 0 280px;
+  @extend .display-row;
+  padding: $padding;
+  background-color: $bg-color-2;
+}
+
+.logo-control img {
+  width: $width-2;
+  height: $height-2;
+}
+
+.music-control {
+  flex: 1 1 auto;
+  @extend .display-col;
+  justify-content: space-between;
+  color: $color-df;
+  padding-left: $padding-l;
+  font-weight: $font-w-300;
+}
+
+.title-content {
+  font-size: $font-s-5;
+  font-weight: $font-w-df;
+  padding-bottom: $padding-bt-2;
+}
+
+.des-music {
+  @extend .display-col;
+}
+
+.play-control {
+  @extend .display-row;
+}
+
+.play-control i {
+  cursor: pointer;
+}
+
+.play-control .fa {
+  padding-right: $padding-r;
+}
+/* end play list control */
+/* start box list */
+.list-music {
+  background-color: $bg-color-1;
+  flex: 1 0 auto;
+  padding-bottom: $padding-bt-3;
+}
+.box-list li {
+  @extend .display-row;
+  flex: 0 0 auto;
+  color: $color-df;
+  font-size: $font-s-3;
+  margin: $margin-tb-lr;
+  padding: $padding-tb-lr;
+}
+
+.box-list li:nth-child(2n) {
+  background-color: $bg-color-3;
+}
+
+.box-list li:hover {
+  background-color: $bg-rgba;
+  cursor: pointer;
+}
+
+.box-list li p {
+  flex: 0 0 25%;
+  padding: $padding-tb-lr-1;
+}
+
+span.codegym-cloud {
+  font-size: $font-s-1;
+  padding: $padding-2;
+  border: $border;
+}
+
+/* end box list */
+/* star play-music */
+#play-music {
+  @extend .display-row;
+  flex: 0 0 100px;
+  background-color: $bg-color-2;
+  color: $color-df;
+  padding: $padding-1;
+}
+
+.detail-song {
+  @extend .display-row;
+  flex: 0 0 auto;
+}
+
+.logo-song img {
+  width: $width-3;
+  padding-bottom: $padding-bt-4;
+  padding-right: $padding-r-1;
+}
+
+.title-song {
+  padding-top: $padding-t;
+  line-height: $line-height;
+}
+
+.song-control {
+  @extend .display-flex;
+  align-items: $align-items;
+  justify-content: space-around;
+  width: $width;
+  margin-left: $margin-l;
+  font-size: $font-s-3;
+}
+
+.song-control i {
+  cursor: pointer;
+}
+/* end play-list-music */
+
+/* Responsive TABLET */
+@media screen and (max-width: 768px) {
+  .sb-logo {
+    background-image: url(../img/icon_zingmp3.svg);
+    background-position-x: 50%;
+    width: $width-4;
+    height: $height-4;
+  }
+
+  .side-bar {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 40px;
+    align-items: $align-items;
+    justify-content: space-around;
+    padding-left: $padding-l-1;
+  }
+
+  .sb-item {
+    display: none;
+  }
+
+  .bd-bottom {
+    border: $border-none;
+    padding-bottom: $padding-bt-5;
+    width: $width-5;
+  }
+
+  .list-music {
+    padding-bottom: $padding-bt-1;
+  }
+}
+/* End Responsive TABLET */
+/* Responsive MOBILE */
+@media screen and (max-width: 500px) {
+  .sm-hide {
+    display: none;
+  }
+
+  .logo-control img {
+    width: $width-6;
+    height: $height-5;
+  }
+
+  .music-control {
+    justify-content: space-evenly;
+    padding-left: $padding-l-1;
+  }
+
+  .top-music-control {
+    display: flex;
+    flex-direction: column;
+    text-align: $text-align;
+    font-size: $font-s-2;
+  }
+
+  .title-content {
+    font-weight: $font-w-400;
+  }
+
+  .play-control {
+    display: flex;
+    flex-direction: column;
+    font-size: $font-s-4;
+    padding-left: $padding-l-2;
+  }
+
+  .list-music {
+    padding-bottom: $padding-bt-5;
+  }
+
+  .box-list li p {
+    flex: 0 0 50%;
+  }
+
+  .sm-text-right {
+    text-align: $text-align-r;
+  }
+
+  .title-song {
+    flex: 0 0 80px;
+    padding-top: $padding-t-1;
+    line-height: $line-height-1;
+  }
+
+  .pd-b-7 {
+    padding-bottom: $padding-bt-6;
+  }
+}

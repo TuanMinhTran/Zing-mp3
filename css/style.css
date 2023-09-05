@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  font-family: Lato, sans-serif;
+  font-size: 0.9em;
+  color: #231b2e;
+  height: 100%;
+}
+
+#main {
+  flex: 1 0 auto;
+  display: flex;
+}
+
+.side-bar {
+  flex: 0 0 240px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #231b2e;
+}
+
+.side-bar i.fa {
+  font-size: 1.2em;
+}
+
+.cate-side-bar {
+  cursor: pointer;
+}
+
+.cate-side-bar .fa {
+  color: #fff;
+}
+
+.cate-side-bar .sb-item {
+  color: #fff;
+  font-weight: bold;
+}
+
+.sb-logo {
+  width: 240px;
+  height: 50px;
+  background-image: url(../img/logo-dark.svg);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  /* background-position-x: 10px; */
+  background-position-y: 30%;
+}
+
+.bd-bottom {
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  width: 100%;
+  padding-bottom: 50px;
+}
+/* end side bar */
+
+/* start play-list-music */
+.play-list-music {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-music-control {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  background-color: #170f23;
+}
+
+.logo-control img {
+  width: 250px;
+  height: 250px;
+}
+
+.music-control {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  padding-left: 30px;
+  font-weight: 300;
+}
+
+.title-content {
+  font-size: 1.7em;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.des-music {
+  display: flex;
+  flex-direction: column;
+}
+
+.play-control {
+  display: flex;
+  flex-direction: row;
+}
+
+.play-control i {
+  cursor: pointer;
+}
+
+.play-control .fa {
+  padding-right: 20px;
+}
+/* end play list control */
+/* start box list */
+.list-music {
+  background-color: #231b2e;
+  flex: 1 0 auto;
+  padding-bottom: 15px;
+}
+.box-list li {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 auto;
+  color: #fff;
+  font-size: 0.9em;
+  margin: 0 10px;
+  padding: 0 20px;
+}
+
+.box-list li:nth-child(2n) {
+  background-color: #170f23b1;
+}
+
+.box-list li:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.box-list li p {
+  flex: 0 0 25%;
+  padding: 15px 0px;
+}
+
+span.codegym-cloud {
+  font-size: 0.8em;
+  padding: 3px;
+  border: 1px solid #170f23;
+}
+
+/* end box list */
+/* star play-music */
+#play-music {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 100px;
+  background-color: #170f23;
+  color: #fff;
+  padding: 10px;
+}
+
+.detail-song {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 auto;
+}
+
+.logo-song img {
+  width: 100px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.title-song {
+  padding-top: 10px;
+  line-height: 25px;
+}
+
+.song-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin-left: auto;
+  font-size: 0.9em;
+}
+
+.song-control i {
+  cursor: pointer;
+}
+/* end play-list-music */
+
+/* Responsive TABLET */
+@media screen and (max-width: 768px) {
+  .sb-logo {
+    background-image: url(../img/icon_zingmp3.svg);
+    width: 60px;
+    height: 60px;
+    background-position-x: 50%;
+  }
+
+  .side-bar {
+    flex: 0 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 0px;
+  }
+
+  .sb-item {
+    display: none;
+  }
+
+  .bd-bottom {
+    border: none;
+    padding-bottom: 0px;
+    width: 25%;
+  }
+
+  .list-music {
+    padding-bottom: 50px;
+  }
+}
+/* End Responsive TABLET */
+/* Responsive MOBILE */
+@media screen and (max-width: 500px) {
+  .sm-hide {
+    display: none;
+  }
+
+  .logo-control img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .music-control {
+    justify-content: space-evenly;
+    padding-left: 0px;
+  }
+
+  .top-music-control {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 0.85em;
+  }
+
+  .title-content {
+    font-weight: 400;
+  }
+
+  .play-control {
+    display: block;
+    font-size: 1.2em;
+    padding-left: 15px;
+  }
+
+  .list-music {
+    padding-bottom: 0px;
+  }
+  
+  .box-list li p {
+    flex: 0 0 50%;
+  }
+
+  .sm-text-right {
+    text-align: right;
+  }
+
+  .title-song {
+    padding-top: 20px;
+    flex: 0 0 80px;
+    line-height: 15px;
+  }
+
+  .pd-b-7 {
+    padding-bottom: 7px;
+  }
+}
